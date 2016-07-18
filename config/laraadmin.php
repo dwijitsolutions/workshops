@@ -6,9 +6,9 @@
 
 return [
     
-    'sitename' => "LaraAdmin 1.0",
-    'sitename2' => ["Lara", "Admin 1.0"],
-    'sitedesc' => "LaraAdmin is a better and smoother way to manage Projects, Clients, Revenue and all the other aspects of Small & Medium Businesses.",
+    'sitename' => "Dwij Tech Workshops",
+    'sitename2' => ["Dwij", "Tech Workshops"],
+    'sitedesc' => "Dwij IT Solutions arranges various lecture series to teach advanced technologies to Student & Teachers.",
     
     'adminRoute' => 'admin',
     
