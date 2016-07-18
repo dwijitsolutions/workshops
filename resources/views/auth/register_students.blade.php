@@ -77,7 +77,7 @@
     </div><!-- /.register-box -->
 
     @include('la.layouts.partials.scripts_auth')
-
+    
     <script>
         $(function () {
             $('input').iCheck({
@@ -86,6 +86,16 @@
                 increaseArea: '20%' // optional
             });
         });
+    </script>
+
+    <script src="{{ asset('la-assets/plugins/select2/select2.full.min.js') }}"></script>
+    <script>
+    $(function () {
+        console.log("slect2 act");
+        $("[rel=select2]").select2({
+
+        });
+    });
     </script>
 </body>
 
