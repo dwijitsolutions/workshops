@@ -29,6 +29,16 @@ class CreateCollegesTable extends Migration
             ["description", "Description",  "Textarea", false, "",          0,  1000,   false],
         ]);
 		
+        $row = new College;
+        $row->name = "MIT TBI";
+        $row->email = "pradeep.dhage@mitcoe.edu.in";
+        $row->phone = "+91 8485800622";
+        $row->website = "http://mittbi.org";
+        $row->address = "MIT College, Kothrud, Pune";
+        $row->city = "Pune";
+        $row->description = "";
+        $row->save();
+
 		/*
 		Row Format:
 		["field_name_db", "Label", "UI Type", "Readonly", "Default_Value", "min_length", "max_length", "Required", "Pop_values"]
