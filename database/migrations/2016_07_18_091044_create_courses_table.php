@@ -21,9 +21,13 @@ class CreateCoursesTable extends Migration
     {
         Module::generate("Courses", 'courses', 'name', [
             ["name",        "Name",         "Name",     false, "",  5,  256,    true],
+            ["Short Name",  "Short Name",   "Name",     false, "",  5,  20,    true],
             ["hours",       "Hours",        "Integer",  false, 0,   0,  5000,   false],
             ["technologies","Technologies", "Taginput", false, [],  0,  0,      false, []],
             ["author",      "Author",       "String",   false, "",  0,  256,    true],
+            ["for",         "For Whom ?",   "String",   false, "For Students",  0,  256,    true],
+            ["front_image", "Front Image",  "Image",    false, 0, 0, 256,  false],
+            ["background", "Background",    "Image",    false, 0, 0, 256,  false],
             ["description", "Description",  "Textarea", false, "",  0,  1000,   false],
         ]);
 		
