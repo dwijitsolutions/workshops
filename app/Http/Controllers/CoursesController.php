@@ -48,7 +48,7 @@ class CoursesController extends Controller
     public function show($id)
     {
         $course = Course::find($id);
-        return view('la.courses.show', [
+        return view('courses.show', [
             
         ])->with('course', $course);
     }

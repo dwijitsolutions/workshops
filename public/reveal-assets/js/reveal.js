@@ -283,9 +283,9 @@
 
 	}
 	
-	if(window.location.href.indexOf("http://localhost/python-basic") < 0 && window.location.href.indexOf("http://dwij.net/tuts/python-basic") < 0) {
-		document.getElementById( 'slidesD' ).innerHTML = "<br><br>Error while loading elements. Please visit<br><br><a href='http://dwij.net/tuts'>http://dwij.net/tuts</a>";
-	}
+	// if(window.location.href.indexOf("http://localhost/python-basic") < 0 && window.location.href.indexOf("http://dwij.net/tuts/python-basic") < 0) {
+	// 	document.getElementById( 'slidesD' ).innerHTML = "<br><br>Error while loading elements. Please visit<br><br><a href='http://dwij.net/tuts'>http://dwij.net/tuts</a>";
+	// }
 
 	/**
 	 * Inspect the client to see what it's capable of, this
