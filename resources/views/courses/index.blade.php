@@ -38,7 +38,7 @@
 								<p>
 									{{ $course->description }}
 								</p>
-								<center><a class="toslides" href="http://dwij.net/tuts/python-basic">{{ $course->name_short }}</a></center>
+								<center><a class="toslides" href="{{ url("courses/".$course->id) }}">{{ $course->name_short }}</a></center>
 							</div>
 						</div>
 					</li>
