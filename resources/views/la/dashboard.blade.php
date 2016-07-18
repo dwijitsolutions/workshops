@@ -480,8 +480,8 @@
 (function($) {
 	$('body').pgNotification({
 		style: 'circle',
-		title: 'LaraAdmin',
-		message: "Welcome to LaraAdmin...",
+		title: 'Dwij Workshops',
+		message: "Welcome to Dwij Tech Workshops...",
 		position: "top-right",
 		timeout: 0,
 		type: "success",
