@@ -25,62 +25,24 @@
 		</header>
 		<div class="wrapper">
 			<ul class="stage clearfix">
-
 				@foreach ($courses as $course)
 					<li class="scene">
 						<div class="movie" onclick="return true">
-							<div class="poster" style="background-image: url(../img/introduction-python-programming.jpg);"></div>
+							<div class="poster" style="background-image: url({{ App\Upload::find($course->front_image)->path() }});"></div>
 							<div class="info">
-								<header>
+								<header style="background-image: url({{ App\Upload::find($course->background)->path() }});">
 									<h1>{{ $course->name }}</h1>
-									<span class="rating">For Students</span>
+									<span class="rating">{{ $course->for }}</span>
 									<span class="duration">{{ $course->hours }} Hours</span>
 								</header>
 								<p>
 									{{ $course->description }}
 								</p>
-								<center><a class="toslides" href="http://dwij.net/tuts/python-basic">Python Basics</a></center>
+								<center><a class="toslides" href="http://dwij.net/tuts/python-basic">{{ $course->name_short }}</a></center>
 							</div>
 						</div>
 					</li>
 				@endforeach
-				
-				<li class="scene">
-					<div class="movie" onclick="return true">
-						<div class="poster"></div>
-						<div class="info">
-							<header>
-								<h1>Introduction to Python Programming</h1>
-								<span class="rating">For Students</span>
-								<span class="duration">20 Hours</span>
-							</header>
-							<p>
-								Python is a widely used general-purpose, high-level programming language that lets you work more quickly and integrate your systems more effectively. <br/><br/>
-								Learn how to start and tweek your programs in python way.
-							</p>
-							<center><a class="toslides" href="http://dwij.net/tuts/python-basic">Python Basics</a></center>
-						</div>
-					</div>
-				</li>
-
-				<li class="scene">
-					<div class="movie" onclick="return true">
-						<div class="poster"></div>
-						<div class="info">
-							<header>
-								<h1>Python Programming on Raspberry Pi</h1>
-								<span class="rating">For Students</span>
-								<span class="duration">60 slides</span>
-							</header>
-							<p>
-								The Raspberry Pi is a tiny and affordable computer that you can use to learn programming through fun and practical projects. <br/><br/>
-								Learn how to up and running with this amazing piece of Hardware.
-							</p>
-							<center><a class="toslides" href="http://dwij.net/tuts/python-rpi">Raspberry Pi</a></center>
-						</div>
-					</div>
-				</li>
-
 			</ul>
 			<br>
 			<br>

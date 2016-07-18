@@ -30,4 +30,12 @@ class Upload extends Model
     {
         return $this->belongsTo('App\User');
     }
+
+    /**
+     * Get the user that owns upload.
+     */
+    public function path()
+    {
+        return url("files/".$this->hash."/".$this->name);
+    }
 }
