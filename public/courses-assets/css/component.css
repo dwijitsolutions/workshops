@@ -218,3 +218,16 @@ Media Queries
 		margin: 30px auto 60px;
 	}
 }
+
+
+.footer-menu {
+	text-align: center;
+}
+
+.footer-menu a {
+	color: #FFF;
+	text-decoration: none;
+}
+.footer-menu a:hover {
+	color: rgba(255, 255, 255, 0.62);
+}
