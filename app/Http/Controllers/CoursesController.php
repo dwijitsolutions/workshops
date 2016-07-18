@@ -48,13 +48,8 @@ class CoursesController extends Controller
     public function show($id)
     {
         $course = Course::find($id);
-        $module = Module::get('Courses');
-        $module->row = $course;
         return view('la.courses.show', [
-            'module' => $module,
-            'view_col' => $this->view_col,
-            'no_header' => true,
-            'no_padding' => "no-padding"
+            
         ])->with('course', $course);
     }
 }
