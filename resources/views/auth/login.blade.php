@@ -50,7 +50,9 @@
 
     @include('auth.partials.social_login')
 
-    <a href="{{ url('/password/reset') }}">I forgot my password</a><br>
+    <hr>
+    <center><a href="{{ url('/register') }}" class="text-center">Register</a> - <a href="{{ url('/password/reset') }}">I forgot my password</a></center>
+    
     <!--<a href="{{ url('/register') }}" class="text-center">Register a new membership</a>-->
 
 </div><!-- /.login-box-body -->

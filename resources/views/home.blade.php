@@ -57,13 +57,12 @@
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#home" class="smoothScroll">Home</a></li>
                 <li><a href="#desc" class="smoothScroll">Description</a></li>
-                <li><a href="#showcase" class="smoothScroll">Showcase</a></li>
                 <li><a href="#contact" class="smoothScroll">Contact</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 @if (Auth::guest())
                     <li><a href="{{ url('/login') }}">Login</a></li>
-                    <!--<li><a href="{{ url('/register') }}">Register</a></li>-->
+                    <li><a href="{{ url('/register') }}">Register</a></li>
                 @else
                     <li><a href="{{ url(config('laraadmin.adminRoute')) }}">{{ Auth::user()->name }}</a></li>
                 @endif
@@ -81,20 +80,7 @@
                 <h1>{{ config('laraadmin.sitename2')[0] }} <b><a>{{ config('laraadmin.sitename2')[1] }}</a></b></h1>
                 <h3>{{ config('laraadmin.sitedesc') }}</h3>
                 <h3><a href="{{ url('/login') }}" class="btn btn-lg btn-success">Get Started!</a></h3><br>
-            </div>
-            <div class="col-lg-2">
-                <h5>Amazing Functionalities</h5>
-                <p>based on Advanced Technologies</p>
-                <img class="hidden-xs hidden-sm hidden-md" src="{{ asset('/la-assets/img/arrow1.png') }}">
-            </div>
-            <div class="col-lg-8">
-                <img class="img-responsive" src="{{ asset('/la-assets/img/app-bg.png') }}" alt="">
-            </div>
-            <div class="col-lg-2">
-                <br>
-                <img class="hidden-xs hidden-sm hidden-md" src="{{ asset('/la-assets/img/arrow2.png') }}">
-                <h5>Completely Packaged...</h5>
-                <p>for Future expantion of Modules</p>
+                <br><br>
             </div>
         </div>
     </div> <!--/ .container -->
@@ -106,140 +92,28 @@
 <div id="intro">
     <div class="container">
         <div class="row centered">
-            <h1>An Architecture designed To Excel</h1>
+            <h1>To empower the youth for Technology</h1>
             <br>
             <br>
             <div class="col-lg-4">
                 <img src="{{ asset('/la-assets/img/intro01.png') }}" alt="">
-                <h3>Communicate</h3>
-                <p>For Proper internal communication.</p>
-            </div>
-            <div class="col-lg-4">
-                <img src="{{ asset('/la-assets/img/intro02.png') }}" alt="">
-                <h3>Schedule</h3>
-                <p>Schedule your work efficiently.</p>
+                <h3>Workshops</h3>
+                <p>For Engineering Students</p>
             </div>
             <div class="col-lg-4">
                 <img src="{{ asset('/la-assets/img/intro03.png') }}" alt="">
-                <h3>Monitoring</h3>
-                <p>Monitor your business on the go.</p>
+                <h3>Training</h3>
+                <p>Industry &amp; Technology Specific Trainings</p>
+            </div>
+            <div class="col-lg-4">
+                <img src="{{ asset('/la-assets/img/intro02.png') }}" alt="">
+                <h3>Limited Workshops</h3>
+                <p>Few workshops with High quality</p>
             </div>
         </div>
         <br>
-        <hr>
     </div> <!--/ .container -->
 </div><!--/ #introwrap -->
-
-<!-- FEATURES WRAP -->
-<div id="features">
-    <div class="container">
-        <div class="row">
-            <h1 class="centered">What's New?</h1>
-            <br>
-            <br>
-            <div class="col-lg-6 centered">
-                <img class="centered" src="{{ asset('/la-assets/img/mobile.png') }}" alt="">
-            </div>
-
-            <div class="col-lg-6">
-                <h3>Some Features</h3>
-                <br>
-                <!-- ACCORDION -->
-                <div class="accordion ac" id="accordion2">
-                    <div class="accordion-group">
-                        <div class="accordion-heading">
-                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-                                First Class Design
-                            </a>
-                        </div><!-- /accordion-heading -->
-                        <div id="collapseOne" class="accordion-body collapse in">
-                            <div class="accordion-inner">
-                                <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                            </div><!-- /accordion-inner -->
-                        </div><!-- /collapse -->
-                    </div><!-- /accordion-group -->
-                    <br>
-
-                    <div class="accordion-group">
-                        <div class="accordion-heading">
-                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-                                Retina Ready Theme
-                            </a>
-                        </div>
-                        <div id="collapseTwo" class="accordion-body collapse">
-                            <div class="accordion-inner">
-                                <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                            </div><!-- /accordion-inner -->
-                        </div><!-- /collapse -->
-                    </div><!-- /accordion-group -->
-                    <br>
-
-                    <div class="accordion-group">
-                        <div class="accordion-heading">
-                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
-                                Awesome Support
-                            </a>
-                        </div>
-                        <div id="collapseThree" class="accordion-body collapse">
-                            <div class="accordion-inner">
-                                <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                            </div><!-- /accordion-inner -->
-                        </div><!-- /collapse -->
-                    </div><!-- /accordion-group -->
-                    <br>
-
-                    <div class="accordion-group">
-                        <div class="accordion-heading">
-                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
-                                Responsive Design
-                            </a>
-                        </div>
-                        <div id="collapseFour" class="accordion-body collapse">
-                            <div class="accordion-inner">
-                                <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                            </div><!-- /accordion-inner -->
-                        </div><!-- /collapse -->
-                    </div><!-- /accordion-group -->
-                    <br>
-                </div><!-- Accordion -->
-            </div>
-        </div>
-    </div><!--/ .container -->
-</div><!--/ #features -->
-
-
-<section id="showcase" name="showcase"></section>
-<div id="showcase">
-    <div class="container">
-        <div class="row">
-            <h1 class="centered">Some Screenshots</h1>
-            <br>
-            <div class="col-lg-8 col-lg-offset-2">
-                <div id="carousel-example-generic" class="carousel slide">
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators">
-                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                    </ol>
-
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner">
-                        <div class="item active">
-                            <img src="{{ asset('/la-assets/img/item-01.png') }}" alt="">
-                        </div>
-                        <div class="item">
-                            <img src="{{ asset('/la-assets/img/item-02.png') }}" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <br>
-        <br>
-    </div><!-- /container -->
-</div>
-
 
 <section id="contact" name="contact"></section>
 <div id="footerwrap">
