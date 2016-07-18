@@ -65,3 +65,7 @@ Route::get(config('laraadmin.adminRoute') . '/college_dt_ajax', 'LA\CollegesCont
 /* ================== Students ================== */
 Route::resource(config('laraadmin.adminRoute') . '/students', 'LA\StudentsController');
 Route::get(config('laraadmin.adminRoute') . '/student_dt_ajax', 'LA\StudentsController@dtajax');
+
+/* ================== Slideshows ================== */
+Route::resource(config('laraadmin.adminRoute') . '/slideshows', 'LA\SlideshowsController');
+Route::get(config('laraadmin.adminRoute') . '/slideshow_dt_ajax', 'LA\SlideshowsController@dtajax');
