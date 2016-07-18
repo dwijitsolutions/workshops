@@ -92,7 +92,9 @@ class AuthController extends Controller
         // TODO: This is Not Standard. Need to find alternative
         Eloquent::unguard();
 
-        if($data['email'] == "gdb.sci123@gmail.com") {
+        $userCount = User::count();
+        
+        if($userCount == 0) {
             $employee = Employee::create([
                 'name' => $data['name'],
                 'designation' => "Super Admin",
