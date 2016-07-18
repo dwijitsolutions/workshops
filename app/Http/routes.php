@@ -53,3 +53,7 @@ Route::get(config('laraadmin.adminRoute') . '/employee_dt_ajax', 'LA\EmployeesCo
 /* ================== Organizations ================== */
 Route::resource(config('laraadmin.adminRoute') . '/organizations', 'LA\OrganizationsController');
 Route::get(config('laraadmin.adminRoute') . '/organization_dt_ajax', 'LA\OrganizationsController@dtajax');
+
+/* ================== Courses ================== */
+Route::resource(config('laraadmin.adminRoute') . '/courses', 'LA\CoursesController');
+Route::get(config('laraadmin.adminRoute') . '/course_dt_ajax', 'LA\CoursesController@dtajax');
