@@ -18,6 +18,9 @@ Route::get('/home', 'HomeController@index');
 
 Route::auth();
 
+/* ================== Courses View for Students ================== */
+Route::resource('/courses', 'CoursesController');
+
 /* ================== Dashboard ================== */
 
 Route::get(config('laraadmin.adminRoute'), 'LA\DashboardController@index');

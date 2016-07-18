@@ -6,6 +6,7 @@
 
 namespace App\Http\Controllers\LA;
 
+use Auth;
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use Illuminate\Http\Request;
@@ -33,6 +34,10 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('la.dashboard');
+        if(Auth::user()->hasRole("Student")) {
+            return redirect("/courses");
+        } else {
+            return view('la.dashboard');
+        }
     }
 }
