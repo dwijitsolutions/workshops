@@ -32,6 +32,13 @@ class CreateRolesTable extends Migration
         $row->parent = 0;
         $row->dept = 1;
         $row->save();
+
+        $row = new Role;
+        $row->name = "Student";
+        $row->name_short = "STUDENT";
+        $row->parent = 1;
+        $row->dept = 1;
+        $row->save();
         
 		/*
 		Row Format:

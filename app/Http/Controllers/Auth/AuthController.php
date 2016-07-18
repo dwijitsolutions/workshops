@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\User;
 use App\Employee;
+use App\Student;
 use App\Role;
 use Validator;
 use Eloquent;
@@ -43,17 +44,15 @@ class AuthController extends Controller
         $this->middleware($this->guestMiddleware(), ['except' => 'logout']);
     }
     
-    /*
     public function showRegistrationForm()
     {
         $userCount = User::count();
         if($userCount == 0) {
             return view('auth.register');
         } else {
-            return redirect('login');
+            return view('auth.register_students');
         }
     }
-    */
     
     public function showLoginForm()
     {
@@ -124,31 +123,23 @@ class AuthController extends Controller
 
             return $user;
         } else {
-            $employee = Employee::create([
+            
+            $student = Student::create([
                 'name' => $data['name'],
-                'designation' => "Super Admin",
-                'mobile' => "8888888888",
-                'mobile2' => "",
+                'college' => $data['college'],
+                'mobile' => $data['mobile'],
                 'email' => $data['email'],
-                'gender' => 'Male',
-                'dept' => "1",
-                'city' => "Pune",
-                'address' => "Karve nagar, Pune 411030",
-                'about' => "About user / biography",
-                'date_birth' => date("Y-m-d"),
-                'date_hire' => date("Y-m-d"),
-                'date_left' => date("Y-m-d"),
-                'salary_cur' => 0,
+                'gender' => $data['gender']
             ]);
             
             $user = User::create([
                 'name' => $data['name'],
                 'email' => $data['email'],
                 'password' => bcrypt($data['password']),
-                'context_id' => $employee->id,
-                'type' => "Employee",
+                'context_id' => $student->id,
+                'type' => "Student",
             ]);
-            $role = Role::where('name', 'Super Admin')->first();
+            $role = Role::where('name', 'Student')->first();
             $user->assignRole($role);
 
             return $user;
